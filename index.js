@@ -9,7 +9,7 @@ server.use(cors())
 server.use(express.static(path.join('__dirname, client/')))
 const PORT = process.env.PORT || 5000
 server.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+    res.sendFile(path.join(__dirname, 'client/public', 'index.html'))
 })
 
 server.get('/api', (req, res) => {
